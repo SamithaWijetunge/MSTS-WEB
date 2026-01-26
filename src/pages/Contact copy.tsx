@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { 
   Phone, 
   Mail, 
@@ -9,8 +8,7 @@ import {
   Clock,
   MessageSquare,
   Globe,
-  Sparkles,
-  Loader2
+  Sparkles
 } from 'lucide-react';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { GradientMesh } from '@/components/GradientMesh';
@@ -19,12 +17,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import abstractBg from '@/assets/abstract-bg.jpg';
-
-
-const EMAILJS_SERVICE_ID = 'service_a7rlc6n';
-const EMAILJS_TEMPLATE_ID = 'template_7ewsybp';
-const EMAILJS_PUBLIC_KEY = 'b-c5iD8s-adupIMTC';
-
 
 const contactDetails = [
   {
@@ -64,7 +56,6 @@ const contactDetails = [
 
 const Contact = () => {
   const { toast } = useToast();
-  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,49 +64,13 @@ const Contact = () => {
     message: '',
   });
 
-  /* ========================
-     HANDLE FORM SUBMIT
-  ======================== */
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        EMAILJS_PUBLIC_KEY
-      );
-
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us! We'll get back to you within 24 hours.",
-      });
-
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: 'Failed to Send',
-        description: 'Something went wrong. Please try again later.',
-        variant: 'destructive',
-      });
-    } finally {
-      setLoading(false);
-    }
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for contacting us! We'll get back to you within 24 hours.",
+    });
+    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
   };
 
   return (
@@ -276,6 +231,34 @@ const Contact = () => {
                   Have a question about our services? Fill out the form and our team 
                   will get back to you within 24 hours with a detailed response.
                 </p>
+                
+                <div className="space-y-4 pt-4">
+                  <motion.div
+                    whileHover={{ x: 8 }}
+                    className="flex items-center gap-4 p-5 glass rounded-2xl border border-border/50"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+                      <MessageSquare className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-foreground">Quick Response</h4>
+                      <p className="text-muted-foreground">We respond within 24 hours</p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    whileHover={{ x: 8 }}
+                    className="flex items-center gap-4 p-5 glass rounded-2xl border border-border/50"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-secondary flex items-center justify-center shadow-lg">
+                      <Phone className="w-7 h-7 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-foreground">24/7 Support</h4>
+                      <p className="text-muted-foreground">Round-the-clock assistance</p>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </AnimatedSection>
 
@@ -353,9 +336,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="quote" size="xl" className="w-full gap-2" disabled={loading}>
-                  {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Send className="w-5 h-5" />}
-                  {loading ? 'Sending...' : 'Send Message'}
+                <Button type="submit" variant="quote" size="xl" className="w-full gap-2">
+                  <Send className="w-5 h-5" />
+                  Send Message
                 </Button>
               </motion.form>
             </AnimatedSection>
@@ -366,6 +349,7 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-20 relative">
         <GradientMesh className="opacity-20" />
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <AnimatedSection>
             <motion.div 
