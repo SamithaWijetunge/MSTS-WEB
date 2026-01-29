@@ -16,9 +16,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  { icon: Facebook, href: 'https://www.facebook.com/MSTSReeferServices', label: 'Facebook' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/109811131/admin/dashboard/', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/msts_maldives/', label: 'Instagram' },
 ];
 
 export const Navbar = () => {
