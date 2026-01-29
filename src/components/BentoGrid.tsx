@@ -16,6 +16,7 @@ const bentoItems = [
     icon: Award,
     size: 'medium',
     gradient: 'from-mint to-accent',
+    //rtewq
   },
   {
     title: 'Factory Trained',
@@ -25,21 +26,21 @@ const bentoItems = [
     gradient: 'from-primary to-accent',
   },
   {
-    title: '50+ Global Partners',
+    title: '4 Main Brands',
     description: 'Working with shipping leaders',
     icon: Globe,
     size: 'small',
     stat: '50+',
   },
   {
-    title: '37+ Years',
+    title: '38+ Years',
     description: 'Industry excellence',
     icon: Shield,
     size: 'small',
     stat: '37+',
   },
   {
-    title: '100+ Experts',
+    title: '40+ Trained Technicians',
     description: 'Qualified technicians',
     icon: Users,
     size: 'small',

@@ -178,6 +178,7 @@ const Index = () => {
                 className="absolute top-1/2 right-10 w-20 h-20 bg-mint/10 rounded-full blur-2xl"
                 animate={{ scale: [1.5, 1, 1.5], opacity: [0.6, 0.3, 0.6] }}
                 transition={{ duration: 5, repeat: Infinity }}
+                
               />
               
               <div className="relative z-10">
