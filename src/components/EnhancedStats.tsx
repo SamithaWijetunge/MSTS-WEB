@@ -129,9 +129,9 @@ const StatItem = ({ value, label, suffix = '', icon: Icon, delay }: StatItemProp
 
 export const EnhancedStats = () => {
   const stats = [
-    { value: 37, label: 'Years of Excellence', suffix: '+', icon: Award },
-    { value: 500, label: 'Projects Completed', suffix: '+', icon: Ship },
-    { value: 100, label: 'Expert Technicians', suffix: '+', icon: Users },
+    { value: 38, label: 'Years of Excellence', suffix: '+', icon: Award },
+    { value: 4, label: 'Main Brands', suffix: '', icon: Ship },
+    { value: 40, label: 'Trained Technicians', suffix: '+', icon: Users },
     { value: 50, label: 'Global Partners', suffix: '+', icon: Globe },
   ];
 
