@@ -82,7 +82,7 @@ const Index = () => {
                   {/* Animated gradient border wrapper */}
                   <div className="relative bg-gradient-to-r from-primary via-accent to-mint animate-gradient-x p-[2px] rounded-xl shadow-xl">
                     <div className="bg-background/95 backdrop-blur-sm p-5 rounded-xl">
-                      <div className="text-4xl font-display font-bold gradient-text">37+</div>
+                      <div className="text-4xl font-display font-bold gradient-text">38+</div>
                       <div className="text-sm font-medium text-foreground/80">Years of Excellence</div>
                     </div>
                   </div>

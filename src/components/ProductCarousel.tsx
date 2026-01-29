@@ -34,7 +34,7 @@ export const ProductCarousel = () => {
             viewport={{ once: true }}
             className="text-muted-foreground font-medium"
           >
-            Trusted for transporting perishables worldwide
+            Trusted for Temperature-Sensitive Storage Solutions
           </motion.p>
         </div>
 
