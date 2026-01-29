@@ -202,7 +202,7 @@ export const Footer = () => {
                     className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors text-sm"
                   >
                     <Phone className="w-5 h-5 text-accent shrink-0" />
-                    +94 11 4511 080 to 86
+                    +94 11 4511 080 
                   </a>
                 </li>
                 <li>
@@ -211,13 +211,10 @@ export const Footer = () => {
                     className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors text-sm"
                   >
                     <Mail className="w-5 h-5 text-accent shrink-0" />
-                    thushara@msts.lk
+                    thamiza@msts.lk
                   </a>
                 </li>
-                <li className="flex items-center gap-3 text-primary-foreground/70 text-sm">
-                  <Clock className="w-5 h-5 text-accent shrink-0" />
-                  Sri Lanka Time: {sriLankaTime}
-                </li>
+                
               </ul>
             </div>
           </div>
