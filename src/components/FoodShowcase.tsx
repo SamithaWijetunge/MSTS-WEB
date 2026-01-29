@@ -75,10 +75,10 @@ export const FoodShowcase = () => {
             <span className="text-sm font-semibold">Cold Chain Excellence</span>
           </motion.div>
           <h2 className="font-display text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            What We <span className="gradient-text">Transport</span>
+            What We <span className="gradient-text">Offer</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Keeping your precious cargo fresh from origin to destination with our state-of-the-art reefer containers
+            We offer reliable reefer container renting, expert repair and maintenance, genuine spare parts, and thorough Pre-Trip Inspections (PTI) to ensure peak performance. With 24/7 real-time temperature monitoring, your cargo stays protected—no compromise on quality
           </p>
         </AnimatedSection>
 
